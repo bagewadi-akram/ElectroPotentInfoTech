@@ -8,6 +8,7 @@
     // Success function
     function done_func(response) {
         message.fadeIn().removeClass('alert-danger').addClass('alert-success');
+                              
         message.text(response);
         setTimeout(function () {
             message.fadeOut();
