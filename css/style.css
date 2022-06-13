@@ -1392,6 +1392,7 @@ textarea.form-control-sm {
   font-size: 32px;
   left: 15px;
   top: -90px;
+  padding: 10px;
 }
 
 .service-bg-dots {
