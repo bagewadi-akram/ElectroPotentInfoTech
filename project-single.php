@@ -1,3 +1,26 @@
+<?php
+
+$pdo = new PDO('mysql:host=localhost;port=3306;dbname=epit_website', 'root', '');
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$name = $_GET['name'] ?? null;
+
+if($name){
+    $statement = $pdo->prepare('select * from products where name like :name');
+    $statement->bindValue(':name', $name);
+}
+else{
+    $statement = $pdo->prepare('SELECT * FROM products ORDER BY id DESC LIMIT 0, 1');
+}
+
+$statement->execute();
+$product = $statement->fetch(PDO::FETCH_ASSOC);
+
+?>
+
+
+
+
 <!DOCTYPE html>
 
 <!--
@@ -76,7 +99,7 @@
                </a>
              </li>
              <li class="nav-item ">
-               <a class="nav-link " href="project.html">
+               <a class="nav-link " href="products.php">
                  Products
                </a>
              </li>
@@ -142,7 +165,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
-        <h2>8051 DEVELOPMENT KIT</h2>
+        <h2><?= $product['name'] ?></h2>
         <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
@@ -174,13 +197,23 @@
             </div>
           </div>
         </div>
+
+
+
+
         <!-- project image -->
-        <img class="img-fluid w-100 mb-5" src="NewImages/Products/developmentkit.jpg" alt="project image">
-        <p class="mb-5">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-          id est laborum.
-          sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+        <!-- <img class="img-fluid w-100 mb-5" src="NewImages/Products/developmentkit.jpg" alt="project image"> -->
+        <?php 
+				$fileDir = "file:///C:/xampp/htdocs/epit_website/public/uploads/";
+        // $fileDir = "https://epit.electropotentinfotech.in/uploads/";
+				$filename = $product['pro_image'];
+				$file = $fileDir . $filename;
+				$b64image = base64_encode(file_get_contents($file));
+			?>	
+			<?php echo "<img src = 'data:image/jpg;base64,$b64image' alt='project image' class='img-fluid w-100 mb-5'>";?>
+
+        <p class="mb-5"><?= $product['description'] ?></p>
+
         <div class="row mb-5">
           <div class="col-md-6 mb-4 mb-md-0">
             <div class="p-4 bg-white box-shadow">
