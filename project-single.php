@@ -60,8 +60,8 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
   <link href="css/style.css" rel="stylesheet">
 
   <!--Favicon-->
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon"> -->
   <script src="plugins/fontawesome/fontaesomelogo.min.css" crossorigin="anonymous"></script>
 </head>
 
@@ -79,8 +79,8 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
      <div class="container">
        <nav class="navbar navbar-expand-lg navbar-light bg-white">
          <a class="navbar-brand" href="index.html">
-         <div class="d-flex align-items-center "><i class="fa-solid fa-microchip  m-1 p-1 text-success display-4" ></i>
-        <h2  class="  border-left border-success pt-2 pl-2" >EPIT</h2></div></a>
+         <img class="img-fluid" src="NewImages/logo1.png" width="180px" height="55px" >
+</a>
            
          <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
            aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -384,8 +384,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
         <!-- footer content -->
         <div class="col-lg-5 mb-5 mb-lg-0">
               <!-- logo -->
-              <a class="mb-4 d-inline-block" href="index.html"><div class="d-flex align-items-center "><i class="fa-solid fa-microchip  m-1 p-1 text-success display-4" ></i>
-            <h2  class="  border-left border-success pt-2 pl-2 text-light">EPIT</h2></div></a>
+              <a class="mb-4 d-inline-block" href="index.html">  <img class="img-fluid" src="NewImages/logo1.png" width="180px" height="55px" ></a>
               <p class="text-light">Our company is committed to serve the industry by producing high precision and advanced technology products of global standards. Our uniqueness lives in anticipating the market needs in advance and developing products to meet those needs.</p>
               <p class="text-light mb-5">Due to our continuous efforts for up gradation of quality and workmanship, we assure the best quality products, timely delivery and better after sales service</p>
               <h4 class="text-white mb-4">Follow Us On</h4>
