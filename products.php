@@ -51,8 +51,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
-
-</head>
+  <script src="plugins/fontawesome/fontaesomelogo.min.css" crossorigin="anonymous"></script></head>
 
 <body>
   <!-- preloader start -->
@@ -66,7 +65,8 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
     <div class="navigation bg-white position-relative">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
-          <a class="navbar-brand" href="index.html"><img class="img-fluid" src="images/logo.png" alt="Electro Potent InfoTech"></a>
+          <a class="navbar-brand" href="index.html"><div class="d-flex align-items-center "><i class="fa-solid fa-microchip  m-1 p-1 text-success display-4" ></i>
+        <h2  class="  border-left border-success pt-2 pl-2" >EPIT</h2></div></a>
           <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -91,20 +91,10 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="service.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Services
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="service.html">Design and Development of Products</a>
-                  <a class="dropdown-item" href="service.html">Embedded system projects</a>
-                  <a class="dropdown-item" href="service.html">Home/Office/Industrial/Automation. </a>
-                  <a class="dropdown-item" href="service.html">PLC and SCADA Projects. </a>
-                  <a class="dropdown-item" href="service.html">Security System</a>
-                  <a class="dropdown-item" href="service.html">Educational kits& Workshops </a>
-                  <a class="dropdown-item" href="service.html">Customize capacitive touch boards </a>
-                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="service.html">Services</a>
               </li>
+              
             </ul>
             <!-- search -->
             <div class="search px-4 pb-3 pb-lg-0">
@@ -132,7 +122,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="text-white mb-3">Case Study</h2>
+          <h2 class="text-white mb-3">Products</h2>
           <!-- breadcrumb -->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent p-0">
@@ -372,7 +362,8 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
           <!-- footer content -->
           <div class="col-lg-5 mb-5 mb-lg-0">
             <!-- logo -->
-            <a class="mb-4 d-inline-block" href="index.html"><img class="img-fluid" src="images/logo-alt.png" alt="Electro Potent InfoTech"></a>
+            <a class="mb-4 d-inline-block" href="index.html"><div class="d-flex align-items-center "><i class="fa-solid fa-microchip  m-1 p-1 text-success display-4" ></i>
+            <h2  class="  border-left border-success pt-2 pl-2 text-light">EPIT</h2></div></a>
             <p class="text-light">Our company is committed to serve the industry by producing high precision and advanced technology products of global standards. Our uniqueness lives in anticipating the market needs in advance and developing products to meet those needs.</p>
             <p class="text-light mb-5">Due to our continuous efforts for up gradation of quality and workmanship, we assure the best quality products, timely delivery and better after sales service</p>
             <h4 class="text-white mb-4">Follow Us On</h4>
@@ -411,19 +402,10 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
                 <ul class="list-unstyled">
                   <li class="text-light mb-3">682/B, ShivaRatna Housing Society, Swami Vivekanand road, near Sayadri Hospital, Pune MH-411037</li>
                   <li class="text-light mb-3">+918080919227</li>
-                  <li class="text-light mb-3">info@ElectroPotentInfoTech.com</li>
+                  <li class="text-light mb-3">info@electropotentinfotech.com</li>
                 </ul>
               </div>
-              <!-- newsletter -->
-              <div class="col-12">
-                <h4 class="text-white mb-4">Subscribe Newsletter</h4>
-                <form action="#">
-                  <div class="position-relative">
-                    <input type="email" class="form-control border-0 text-white newsletter-form" id="newsletter" name="newsletter" placeholder="Enter your email">
-                    <button type="submit" class="btn btn-primary btn-subscribe">Subscribe</button>
-                  </div>
-                </form>
-              </div>
+            
             </div>
           </div>
         </div>
@@ -434,7 +416,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="mb-0 text-white"><span class="text-primary">ElectroPotentInfoTech</span> &copy; <script>
+            <p class="mb-0 text-white"><a href="index.html"><span class="text-primary">Electro Potent InfoTech</span></a> &copy; <script>
                 var CurrentYear = new Date().getFullYear()
                 document.write(CurrentYear)
               </script> All Right Reserved</p>
