@@ -3,6 +3,9 @@
 
     var form = $('.contact__form'),
         message = $('.contact__msg'),
+
+        // var form = document.getElementById("contact_form"),
+        // message = document.getElementById("contact_msg"),    
         form_data;
 
     // Success function

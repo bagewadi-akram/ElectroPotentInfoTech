@@ -175,10 +175,17 @@
         <h3 class="section-title">Contact Form</h3>
         
         
+<!-- <<<<<<< azam -->
+        <form class="contact__form" method="post" action="mail.php">
+      
+<!-- ======= -->
         <form id="contact-form" method="post" action="mail.php" class="row " name="contact__form" >
+<!-- >>>>>>> master -->
           <div class="alert alert-success contact__msg" style="display: none" role="alert">
             Your message was sent successfully.
         </div>
+      
+        <div class="row">
           <div class="col-md-6">
             <input type="text" name="name" id="name" class="form-control border-0 rounded-0 box-shadow mb-4" placeholder="Name">
           </div>
@@ -197,6 +204,7 @@
           <div class="col-12">
             <button type="submit" value="send" class="btn btn-primary hover-ripple" >send message</button>
           </div>
+        </div>
         </form>
 
 
