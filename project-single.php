@@ -23,12 +23,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
 
 <!DOCTYPE html>
 
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
+
 
 <html lang="zxx">
 
@@ -60,16 +55,16 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
   <link href="css/style.css" rel="stylesheet">
 
   <!--Favicon-->
-  <!-- <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-  <link rel="icon" href="images/favicon.png" type="image/x-icon"> -->
+  <link rel="shortcut icon" href="NewImages/logo.png" type="image/x-icon">
+  <link rel="icon" href="NewImages/logo.png" type="image/x-icon">
   <script src="plugins/fontawesome/fontaesomelogo.min.css" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <!-- preloader start -->
-  <div class="preloader">
+  <!-- <div class="preloader">
     <div class="spin"></div>
-  </div>
+  </div> -->
   <!-- preloader end -->
 
 <!-- header -->
@@ -112,7 +107,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
               </li>
            </ul>
            <!-- search -->
-           <div class="search px-4 pb-3 pb-lg-0">
+           <!-- <div class="search px-4 pb-3 pb-lg-0">
              <button id="searchOpen" class="search-btn"><i class="fa fa-search text-dark"></i></button>
              <div class="search-wrapper">
                <form action="#">
@@ -120,9 +115,9 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
                </form>
                <button id="searchClose" class="search-close"><i class="fa fa-close text-dark"></i></button>
              </div>
-           </div>
+           </div> -->
            <!-- get start btn -->
-           <a href="service.html" class="btn btn-primary hover-ripple">get started</a>
+           <a href="service.html" class="btn btn-info hover-ripple ml-5">get started</a>
          </div>
        </nav>
      </div>
