@@ -278,7 +278,10 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
         <!-- quick contact -->
         <div class="bg-white px-4 py-5 box-shadow mb-5">
           <h4 class="mb-4">Quick Contact</h4>
-          <form action="#">
+          <form class="contact__form" method="post" action="mail.php">
+          <div class="alert alert-success contact__msg" style="display: none" role="alert">
+            Your message was sent successfully.
+        </div>
             <input type="text" name="name" id="name" class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3"
               placeholder="Name">
             <input type="email" name="mail" id="mail" class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3"
@@ -392,6 +395,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
 
 <!-- Main Script -->
 <script src="js/script.js"></script>
+<script src="js/contact.js"></script>
 
 </body>
 </html>
