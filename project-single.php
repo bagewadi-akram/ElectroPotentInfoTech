@@ -151,11 +151,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
     <div class="row">
       <div class="col-lg-8">
         <h2><?= $product['name'] ?></h2>
-        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.</p>
+        <p class="mb-5"><?= $product['description'] ?></p>
         <div class="row no-gutters bg-secondary p-sm-5 p-4 mb-5">
           <div class="col-md-3 col-6 mb-4 mb-md-0">
             <div class="border-md-right border-muted ml-4">
@@ -197,30 +193,27 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
 			?>	
 			<?php echo "<img src = 'data:image/jpg;base64,$b64image' alt='project image' class='img-fluid w-100 mb-5'>";?>
 
-        <p class="mb-5"><?= $product['description'] ?></p>
+        <p class="mb-5"><?= $product['name'] ?></p>
 
         <div class="row mb-5">
           <div class="col-md-6 mb-4 mb-md-0">
             <div class="p-4 bg-white box-shadow">
               <h3>The Challenge</h3>
-              <p>Excepteur sint occaecat cupidatat proident sunt in culpa qui officia ut dese runt mollit anim id est
-                laborum. sed ut perspiciatis ex unde omnis iste natus error voluptatem acusantium.</p>
-              <p>Eaque ipsa quae illo inventore verita
-                tis et quasi architect beatae.
-                vitae dicta sunt explicabo.</p>
+              <p>The global marketplace is constantly evolving. No other industry experiences more change than electronics. New technology becomes available at an alarming rate. </p>
+              <p>It’s becoming more and more important for us to produce smaller products that last longer and consume less power </p>
               <ul class="list-styled style-circle">
-                <li class="mb-1">Quality Services</li>
-                <li class="mb-1">Clients Satisfaction</li>
-                <li class="mb-1">Clients Services</li>
+                <li class="mb-1">Smart Electronics Devices.</li>
+                <li class="mb-1">Eco-Accommodating Procedures</li>
+                <li class="mb-1">Energy Efficient</li>
               </ul>
             </div>
           </div>
           <div class="col-md-6">
             <div class="p-4 bg-white box-shadow">
-              <h3>The Strategy</h3>
-              <p>Excepteur sint occaecat cupidatat proident sunt in culpa qui officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptate? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, quaerat!</p>
+              <h3 class="mt-2">The Strategy</h3>
+              <p>Digital electronics marketing can be overwhelming for managers and even C-suite executives. From the beginning, identify your audience and solidify your brand’s story.</p>
               <!-- chart -->
-<canvas id="profit"></canvas>
+<canvas id="profit" class="mt-4"></canvas>
 
 <!-- script -->
 <script>
@@ -242,7 +235,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
         ],
         backgroundColor: 'transparent',
         borderWidth: 3,
-        borderColor: '#86c33a'
+        borderColor: '#62caf3'
       }]
     },
     options: {
@@ -274,58 +267,14 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
           </div>
         </div>
         <!-- Analyze your business -->
-        <h3>Analyze your business</h3>
-        <p class="mb-5">Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-          est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
-          tempora incidunt ut labore et dolore magnam aliquam.</p>
+        
         <!-- accordion -->
-        <div id="accordion">
-          <!-- accordion item -->
-          <div class="card border-0 mb-4">
-            <div class="card-header p-0 border-0 bg-transparent">
-              <a class="card-link h4 text-dark font-secondary d-block tex-dark mb-0 py-10" data-toggle="collapse" href="#collapseOne">
-                <i class="fa fa-minus text-primary mr-2"></i> Elit Duied Aiusmod Tempor
-              </a>
-            </div>
-            <div id="collapseOne" class="collapse show" data-parent="#accordion">
-              <div class="card-body text-color pl-4 pb-0">
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-                non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam.
-              </div>
-            </div>
-          </div>
-          <!-- accordion item -->
-          <div class="card border-0 mb-4">
-            <div class="card-header p-0 border-0 bg-transparent">
-              <a class="card-link h4 text-dark font-secondary d-block tex-dark mb-0 py-10" data-toggle="collapse" href="#collapseTwo">
-                <i class="fa fa-plus text-primary mr-2"></i> Mod Tempor did Labore Dolory
-              </a>
-            </div>
-            <div id="collapseTwo" class="collapse" data-parent="#accordion">
-              <div class="card-body text-color pl-4 pb-0">
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-                non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam.
-              </div>
-            </div>
-          </div>
-          <!-- accordion item -->
-          <div class="card border-0 mb-4">
-            <div class="card-header p-0 border-0 bg-transparent">
-              <a class="card-link h4 text-dark font-secondary d-block tex-dark mb-0 py-10" data-toggle="collapse" href="#collapseThree">
-                <i class="fa fa-plus text-primary mr-2"></i> Aiusmod Tempor did Labore Dolory
-              </a>
-            </div>
-            <div id="collapseThree" class="collapse" data-parent="#accordion">
-              <div class="card-body text-color pl-4 pb-0">
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-                non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam.
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
       <!-- sidebar -->
-      <aside class="col-lg-4">
+     
+      
+      <aside class="col-lg-4 align-item-center top-50">
         <!-- quick contact -->
         <div class="bg-white px-4 py-5 box-shadow mb-5">
           <h4 class="mb-4">Quick Contact</h4>
@@ -344,27 +293,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
           </form>
         </div>
         <!-- pdf download -->
-        <div class="bg-white px-4 py-5 box-shadow mb-5">
-          <h4 class="mb-4">Download PDF</h4>
-          <ul class="list-unstyled">
-            <li class="d-flex pb-3 mb-3 border-bottom border-color align-items-center">
-              <i class="fa fa-file-pdf-o text-primary icon-sm"></i>
-              <div class="ml-3">
-                <p class="mb-0 text-dark">Market Growth.pdf</p>
-                <span class="text-dark">1.53 mb</span>
-              </div>
-              <a href="#" class="text-color ml-auto"><i class="fa fa-download icon-xs"></i></a>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class="fa fa-file-pdf-o text-primary icon-sm"></i>
-              <div class="ml-3">
-                <p class="mb-0 text-dark">Market Growth.pdf</p>
-                <span class="text-dark">1.53 mb</span>
-              </div>
-              <a href="#" class="text-color ml-auto"><i class="fa fa-download icon-xs"></i></a>
-            </li>
-          </ul>
-        </div>
+        
       </aside>
     </div>
   </div>
