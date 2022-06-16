@@ -387,15 +387,14 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
             <div class="row">
               <!-- service list -->
               <div class="col-6 mb-5">
-                <h4 class="text-white mb-4">Services</h4>
-                <ul class="list-styled">
-                  <li class="mb-3 text-light"><a class="text-light d-block" href="about.html">Company History</a></li>
-                  <li class="mb-3 text-light"><a class="text-light d-block" href="about.html">About Us</a></li>
-                  <li class="mb-3 text-light"><a class="text-light d-block" href="contact.html">Contact Us</a></li>
-                  <li class="mb-3 text-light"><a class="text-light d-block" href="service.html">Services</a></li>
-                  <li class="mb-3 text-light"><a class="text-light d-block" href="privacy-policy.html">Privacy Policy</a></li>
-                </ul>
-              </div>
+              <h4 class="text-white mb-4">Services</h4>
+              <ul class="list-styled">
+                <li class="mb-3 text-light"><a class="text-light d-block" href="about.html">Company History</a></li>
+                <li class="mb-3 text-light"><a class="text-light d-block" href="about.html">About Us</a></li>
+                <li class="mb-3 text-light"><a class="text-light d-block" href="contact.html">Contact Us</a></li>
+                <li class="mb-3 text-light"><a class="text-light d-block" href="service.html">Services</a></li>
+                              </ul>
+            </div>
               <!-- contact info -->
               <div class="col-6 mb-5">
                 <h4 class="text-white mb-4">Contact Info</h4>

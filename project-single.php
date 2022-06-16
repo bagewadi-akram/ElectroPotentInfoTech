@@ -338,8 +338,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
                 <li class="mb-3 text-light"><a class="text-light d-block" href="about.html">About Us</a></li>
                 <li class="mb-3 text-light"><a class="text-light d-block" href="contact.html">Contact Us</a></li>
                 <li class="mb-3 text-light"><a class="text-light d-block" href="service.html">Services</a></li>
-                <li class="mb-3 text-light"><a class="text-light d-block" href="privacy-policy.html">Privacy Policy</a></li>
-              </ul>
+                              </ul>
             </div>
             <!-- contact info -->
             <div class="col-6 mb-5">
