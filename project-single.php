@@ -66,64 +66,54 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
     <div class="spin"></div>
   </div> -->
   <!-- preloader end -->
-
 <!-- header -->
 <header>
-  <!-- navigation -->
-   <div class="navigation-sm bg-white position-relative">
-     <div class="container">
-       <nav class="navbar navbar-expand-lg navbar-light bg-white">
-         <a class="navbar-brand" href="index.html">
-         <img class="img-fluid" src="NewImages/logo1.png" width="180px" height="55px" >
-</a>
-           
-         <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
-           aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-         </button>
- 
-         <div class="collapse navbar-collapse text-center pb-lg-0" id="navigation">
-           <ul class="navbar-nav ml-auto">
-             <li class="nav-item ">
-               <a class="nav-link " href="index.html">
-                 Home
-               </a>
-             </li>
-             <li class="nav-item ">
-               <a class="nav-link " href="about.html">
-                 About us
-               </a>
-             </li>
-             <li class="nav-item ">
-               <a class="nav-link " href="products.php">
-                 Products
-               </a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="contact.html">Contact</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="service.html">Services</a>
-              </li>
-           </ul>
-           <!-- search -->
-           <!-- <div class="search px-4 pb-3 pb-lg-0">
-             <button id="searchOpen" class="search-btn"><i class="fa fa-search text-dark"></i></button>
-             <div class="search-wrapper">
-               <form action="#">
-                 <input class="search-box form-control" id="search" type="search" placeholder="Type & Hit Enter...">
-               </form>
-               <button id="searchClose" class="search-close"><i class="fa fa-close text-dark"></i></button>
-             </div>
-           </div> -->
-           <!-- get start btn -->
-           <a href="service.html" class="btn btn-info hover-ripple ml-5">get started</a>
-         </div>
-       </nav>
-     </div>
-   </div>
-   <!-- /navigation -->
- </header>
+ <!-- navigation -->
+  <div class="navigation bg-white position-relative pl-5 pr-5">
+    <div class="container-fluid ml-5 mr-5">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="index.html">
+          <img class="img-fluid" src="NewImages/logo1.png" width="200px" height="150px">
+                  </a>
+          
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center pb-lg-0" id="navigation">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">
+                Home
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="about.html">
+                About us
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="products.php">
+                Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Services</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="career.html">Career   </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+                        </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- /navigation -->
+</header>
 <!-- /header -->
 
 <!-- page title -->
@@ -144,40 +134,6 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
   </div>
 </section>
 <!-- /page title -->
-
-<!-- project details -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <h2><?= $product['name'] ?></h2>
-        <p class="mb-5"><?= $product['description'] ?></p>
-        <div class="row no-gutters bg-secondary p-sm-5 p-4 mb-5">
-          <div class="col-md-3 col-6 mb-4 mb-md-0">
-            <div class="border-md-right border-muted ml-4">
-              <h5 class="text-white text-uppercase">CLIENT</h5>
-              <span class="text-light">Australia</span>
-            </div>
-          </div>
-          <div class="col-md-3 col-6 mb-4 mb-md-0">
-            <div class="border-md-right border-muted ml-4">
-              <h5 class="text-white text-uppercase">Category</h5>
-              <span class="text-light">Investment</span>
-            </div>
-          </div>
-          <div class="col-md-3 col-6 mb-4 mb-md-0">
-            <div class="border-md-right border-muted ml-4">
-              <h5 class="text-white text-uppercase">DATE</h5>
-              <span class="text-light">16 April, 2018</span>
-            </div>
-          </div>
-          <div class="col-md-3 col-6 mb-4 mb-md-0">
-            <div class="ml-4">
-              <h5 class="text-white text-uppercase">status</h5>
-              <span class="text-light">In Process</span>
-            </div>
-          </div>
-        </div>
 
 
 
