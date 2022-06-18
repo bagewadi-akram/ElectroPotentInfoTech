@@ -1,6 +1,7 @@
 <?php
 
 $pdo = new PDO('mysql:host=localhost;port=3306;dbname=epit_website', 'root', '');
+// $pdo = new PDO('mysql:host=localhost;port=3306;dbname=wuwcraik_epit', 'wuwcraik_epituser', 'kPUGH1oGn[z');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $statement = $pdo->prepare("select * from products where status like 'published' order by created_at desc");
