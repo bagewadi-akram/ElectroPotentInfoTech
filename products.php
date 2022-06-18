@@ -130,20 +130,10 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
   <!-- /page title -->
 
   <!-- case study -->
-  <section class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <ul class="list-inline text-center mb-4 filter-controls">
-            <li class="list-inline-item h5 p-2 font-secondary text-dark active" data-filter="all">ALL</li>
-            <li class="list-inline-item h5 p-2 font-secondary text-dark" data-filter="art">ART DIRECTION</li>
-            <li class="list-inline-item h5 p-2 font-secondary text-dark" data-filter="concept">CONCEPT</li>
-            <li class="list-inline-item h5 p-2 font-secondary text-dark" data-filter="portfolio">DARK PORTFOLIO</li>
-            <li class="list-inline-item h5 p-2 font-secondary text-dark" data-filter="illustration">ILLUSTRATION</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row filtr-container">
+  <!-- <section class="section"> -->
+    <div class="container-fluid p-5 mb-5">
+     <h1 class="text-center">Our Products</h1>
+      <div class="row filtr-container p-5">
 
 
 
@@ -185,158 +175,6 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-<!-- 
-        
-        <div class="col-lg-4 col-sm-6 mb-4 filtr-item" data-category="concept">
-          <div class="project-item">
-            <div class="position-relative overflow-hidden mb-4 m-2">
-              <img src="NewImages/Products/air-purifier.jpg" alt="project thumb" class="img-fluid w-100">
-              <div class="hover-overlay">
-                <a href="NewImages/Products/air-purifier.jpg" class="venobox"><i class="uni-plus"></i></a>
-              </div>
-            </div>
-            
-            <div>
-              <h6 class="text-primary">Digital Marketing</h6>
-              <h4><a href="project-single.html" class="text-dark">Air Purifier</a></h4>
-            </div>
-          </div>
-        </div>
-
-
-
-        
-        <div class="col-lg-4 col-sm-6 mb-4 filtr-item" data-category="portfolio">
-          <div class="project-item">
-            <div class="position-relative overflow-hidden mb-4 m-2">
-              <img src="NewImages/Products/powersuply.jpg" alt="project thumb" class="img-fluid w-100">
-              <div class="hover-overlay">
-                <a href="NewImages/Products/powersuply.jpg" class="venobox"><i class="uni-plus"></i></a>
-              </div>
-            </div>
-            
-            <div>
-              <h6 class="text-primary">Finacial Analytsis</h6>
-              <h4><a href="project-single.html" class="text-dark">Power Supply</a></h4>
-            </div>
-          </div>
-        </div>
-
-
-
-        
-        <div class="col-lg-4 col-sm-6 mb-4 filtr-item" data-category="concept">
-          <div class="project-item">
-            <div class="position-relative overflow-hidden mb-4 m-2">
-              <img src="NewImages/Products/UART.jpg" alt="project thumb" class="img-fluid w-100">
-              <div class="hover-overlay">
-                <a href="NewImages/Products/UART.jpg" class="venobox"><i class="uni-plus"></i></a>
-              </div>
-            </div>
-            
-            <div>
-              <h6 class="text-primary">Marketing Strategy</h6>
-              <h4><a href="project-single.html" class="text-dark">USB to UART</a></h4>
-            </div>
-          </div>
-        </div>
-
-
-
-        
-        <div class="col-lg-4 col-sm-6 mb-4 filtr-item" data-category="illustration">
-          <div class="project-item">
-            <div class="position-relative overflow-hidden mb-4 m-2">
-              <img src="NewImages/Products/waterlevelcontrol.jpg" alt="project thumb" class="img-fluid w-100">
-              <div class="hover-overlay">
-                <a href="NewImages/Products/waterlevelcontrol.jpg" class="venobox"><i class="uni-plus"></i></a>
-              </div>
-            </div>
-            
-            <div>
-              <h6 class="text-primary">Digital Marketing</h6>
-              <h4><a href="project-single.html" class="text-dark">Water level Control</a></h4>
-            </div>
-          </div>
-        </div>
-
-
-
-
-        
-        <div class="col-lg-4 col-sm-6 mb-4 filtr-item" data-category="concept">
-          <div class="project-item">
-            <div class="position-relative overflow-hidden mb-4 m-2">
-              <img src="NewImages/Products/freqgenerator.jpg" alt="project thumb" class="img-fluid w-100">
-              <div class="hover-overlay">
-                <a href="NewImages/Products/freqgenerator.jpg" class="venobox"><i class="uni-plus"></i></a>
-              </div>
-            </div>
-            
-            <div>
-              <h6 class="text-primary">Marketing Strategy</h6>
-              <h4><a href="project-single.html" class="text-dark">Frequency Generator</a></h4>
-            </div>
-          </div>
-        </div>
-
-
-
-        
-        <div class="col-lg-4 col-sm-6 mb-4 filtr-item" data-category="portfolio, art">
-          <div class="project-item">
-            <div class="position-relative overflow-hidden mb-4 m-2">
-              <img src="NewImages/Products/autoswitch.jpg" alt="project thumb" class="img-fluid w-100">
-              <div class="hover-overlay">
-                <a href="NewImages/Products/autoswitch.jpg" class="venobox"><i class="uni-plus"></i></a>
-              </div>
-            </div>
-            
-            <div>
-              <h6 class="text-primary">Finacial Analytsis</h6>
-              <h4><a href="project-single.html" class="text-dark">Auto Switch</a></h4>
-            </div>
-          </div>
-        </div>
-
-
-
-
-        
-        <div class="col-lg-4 col-sm-6 mb-4 filtr-item" data-category="portfolio, art">
-          <div class="project-item">
-            <div class="position-relative overflow-hidden mb-4 m-2">
-              <img src="NewImages/Products/realay.jpg" alt="project thumb" class="img-fluid w-100">
-              <div class="hover-overlay">
-                <a href="NewImages/Products/realay.jpg" class="venobox"><i class="uni-plus"></i></a>
-              </div>
-            </div>
-            
-            <div>
-              <h6 class="text-primary">Finacial Analytsis</h6>
-              <h4><a href="project-single.html" class="text-dark">Relay Modules</a></h4>
-            </div>
-          </div>
-        </div>
-
-
-
-        
-        <div class="col-lg-4 col-sm-6 mb-4 filtr-item" data-category="illustration">
-          <div class="project-item">
-            <div class="position-relative overflow-hidden mb-4 m-2">
-              <img src="NewImages/Products/remote.jpg" alt="project thumb" class="img-fluid ">
-              <div class="hover-overlay">
-                <a href="NewImages/Products/remote.jpg" class="venobox"><i class="uni-plus"></i></a>
-              </div>
-            </div>
-            
-            <div>
-              <h6 class="text-primary">Digital Marketing</h6>
-              <h4><a href="project-single.html" class="text-dark">Customize Remote Controller</a></h4>
-            </div>
-          </div>
-        </div> -->
 
 
 
@@ -346,41 +184,40 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
   </section>
   <!-- /case study -->
 
-  <!-- footer -->
-  <footer>
-    <!-- main footer -->
-    <div class="section bg-secondary">
-      <div class="container">
-        <div class="row justify-content-between">
-          <!-- footer content -->
-          <div class="col-lg-5 mb-5 mb-lg-0">
-            <!-- logo -->
-            <a class="mb-4 d-inline-block" href="index.html">          <img class="img-fluid" src="NewImages/logo1.png" width="180px" height="55px" >
-</a>
-            <p class="text-light">Our company is committed to serve the industry by producing high precision and advanced technology products of global standards. Our uniqueness lives in anticipating the market needs in advance and developing products to meet those needs.</p>
-            <p class="text-light mb-5">Due to our continuous efforts for up gradation of quality and workmanship, we assure the best quality products, timely delivery and better after sales service</p>
-            <h4 class="text-white mb-4">Follow Us On</h4>
-            <!-- social links -->
-            <ul class="list-inline social-icon-alt">
-              <li class="list-inline-item">
-                <a class="hover-ripple" href="#"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li class="list-inline-item">
-                <a class="hover-ripple" href="#"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li class="list-inline-item">
-                <a class="hover-ripple" target="_blank" href="https://www.linkedin.com/company/electropotent-infotech/"><i class="fa fa-linkedin"></i></a>
-              </li>
-              <li class="list-inline-item">
-                <a class="hover-ripple" href="#"><i class="fa fa-pinterest"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-6">
-            <div class="row">
-              <!-- service list -->
-              <div class="col-6 mb-5">
-              <h4 class="text-white mb-4">Services</h4>
+<!-- footer -->
+<footer>
+  <!-- main footer -->
+  <div class="section bg-secondary p-5 mb-0 pb-0">
+    <div class="container-fluid pl-5 pr-5 mb-0">
+      <div class="row justify-content-between">
+        <!-- footer content -->
+        <div class="col-lg-5">
+          <!-- logo -->
+          <a class="mb-4 d-inline-block p-1" href="index.html"><img src="NewImages/logo1.png" width="220px" height="100px"></a>
+          <p class="text-light">Our company is committed to serve the industry by producing high precision and advanced technology products of global standards. Our uniqueness lives in anticipating the market needs in advance and developing products to meet those needs.</p>
+          <p class="text-light mb-5">Due to our continuous efforts for up gradation of quality and workmanship, we assure the best quality products, timely delivery and better after sales service</p>
+          <h4 class="text-white mb-2">Follow Us On</h4>
+          <!-- social links -->
+          <ul class="list-inline social-icon-alt">
+            <li class="list-inline-item">
+              <a class="hover-ripple" href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="hover-ripple" href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="hover-ripple" target="_blank" href="https://www.linkedin.com/company/electropotent-infotech/"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a class="hover-ripple" href="#"><i class="fa fa-pinterest"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <!-- service list -->
+            <div class="col-6 mb-5">
+              <h4 class="text-white mb-4 mt-5">Services</h4>
               <ul class="list-styled">
                 <li class="mb-3 text-light"><a class="text-light d-block" href="about.html">Company History</a></li>
                 <li class="mb-3 text-light"><a class="text-light d-block" href="about.html">About Us</a></li>
@@ -389,37 +226,30 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
                               </ul>
             </div>
               <!-- contact info -->
-              <div class="col-6 mb-5">
+              <div class="col-6 mb-5 mt-5">
                 <h4 class="text-white mb-4">Contact Info</h4>
                 <ul class="list-unstyled">
-                  <li class="text-light mb-3">682/B, ShivaRatna Housing Society, Swami Vivekanand road, near Sayadri Hospital, Pune MH-411037</li>
-                  <li class="text-light mb-3">+918080919227</li>
+                  <li class="text-light mb-2">682/B, ShivaRatna Housing Society, Swami Vivekanand road, near Sayadri Hospital, Pune MH-411037</li>
+                  <li class="text-light mb-2">+918080919227</li>
                   <li class="text-light mb-3">info@electropotentinfotech.com</li>
                 </ul>
               </div>
-            
-            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- copyright -->
-    <div class="bg-secondary-darken py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="mb-0 text-white"><a href="index.html"><span class="text-primary">Electro Potent InfoTech</span></a> &copy; <script>
-                var CurrentYear = new Date().getFullYear()
-                document.write(CurrentYear)
-              </script> All Right Reserved</p>
-          </div>
-       
-        </div>
-      </div>
+  </div>
+  <!-- copyright -->
+  <div class="bg-secondary-darken p-1">
+    <div class="container-fluid">
+          <p class="mb-0 text-white text-right"><a href="index.html"><span class="text-danger">Electro Potent InfoTech</span></a> &copy; <script>
+              var CurrentYear = new Date().getFullYear()
+              document.write(CurrentYear)
+            </script> All Right Reserved</p>
     </div>
-  </footer>
-  <!-- /footer -->
-
+  </div>
+</footer>
+<!-- /footer -->
   <!-- jQuery -->
   <script src="plugins/jQuery/jquery.min.js"></script>
   <!-- Bootstrap JS -->

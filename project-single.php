@@ -120,7 +120,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
 <section class="section bg-cover overlay" data-background="./NewImages/aboutus.jpg">
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-13">
         <h2 class="text-white mb-3">Project Details</h2>
         <!-- breadcrumb -->
         <nav aria-label="breadcrumb">
@@ -134,6 +134,40 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
   </div>
 </section>
 <!-- /page title -->
+
+<!-- project details -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2><?= $product['name'] ?></h2>
+        <p class="mb-5"><?= $product['description'] ?></p>
+        <!-- <div class="row no-gutters bg-secondary p-sm-5 p-4 mb-5">
+          <div class="col-md-3 col-6 mb-4 mb-md-0">
+            <div class="border-md-right border-muted ml-4">
+              <h5 class="text-white text-uppercase">CLIENT</h5>
+              <span class="text-light">Australia</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4 mb-md-0">
+            <div class="border-md-right border-muted ml-4">
+              <h5 class="text-white text-uppercase">Category</h5>
+              <span class="text-light">Investment</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4 mb-md-0">
+            <div class="border-md-right border-muted ml-4">
+              <h5 class="text-white text-uppercase">DATE</h5>
+              <span class="text-light">16 April, 2018</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4 mb-md-0">
+            <div class="ml-4">
+              <h5 class="text-white text-uppercase">status</h5>
+              <span class="text-light">In Process</span>
+            </div>
+          </div>
+        </div> -->
 
 
 
@@ -151,77 +185,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
 
         <p class="mb-5"><?= $product['name'] ?></p>
 
-        <div class="row mb-5">
-          <div class="col-md-6 mb-4 mb-md-0">
-            <div class="p-4 bg-white box-shadow">
-              <h3>The Challenge</h3>
-              <p>The global marketplace is constantly evolving. No other industry experiences more change than electronics. New technology becomes available at an alarming rate. </p>
-              <p>It’s becoming more and more important for us to produce smaller products that last longer and consume less power </p>
-              <ul class="list-styled style-circle">
-                <li class="mb-1">Smart Electronics Devices.</li>
-                <li class="mb-1">Eco-Accommodating Procedures</li>
-                <li class="mb-1">Energy Efficient</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="p-4 bg-white box-shadow">
-              <h3 class="mt-2">The Strategy</h3>
-              <p>Digital electronics marketing can be overwhelming for managers and even C-suite executives. From the beginning, identify your audience and solidify your brand’s story.</p>
-              <!-- chart -->
-<canvas id="profit" class="mt-4"></canvas>
-
-<!-- script -->
-<script>
-  let profit = document.getElementById('profit').getContext('2d');
-  let profitChart = new Chart(profit, {
-    type: 'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-    data: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'jul'],
-      datasets: [{
-        label: 'Profit',
-        data: [
-          230,
-          400,
-          500,
-          380,
-          350,
-          450,
-          601
-        ],
-        backgroundColor: 'transparent',
-        borderWidth: 3,
-        borderColor: '#62caf3'
-      }]
-    },
-    options: {
-      title: {
-        display: false,
-        text: 'Sales: 1 Sep, 2017 - 2 Aug, 2018',
-        fontSize: 15
-      },
-      legend: {
-        display: false,
-        position: 'right',
-        padding: 5,
-      },
-      layout: {
-        padding: {
-          left: 0,
-          right: 0,
-          bottom: 0,
-          top: 0
-        }
-      },
-      tooltips: {
-        enabled: true
-      }
-    }
-  });
-</script>
-            </div>
-          </div>
-        </div>
+       
         <!-- Analyze your business -->
         
         <!-- accordion -->
@@ -230,7 +194,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
       <!-- sidebar -->
      
       
-      <aside class="col-lg-4 align-item-center top-50">
+      <aside class="col-lg-4 align-item-center">
         <!-- quick contact -->
         <div class="bg-white px-4 py-5 box-shadow mb-5">
           <h4 class="mb-4">Quick Contact</h4>
@@ -258,19 +222,20 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
   </div>
 </section>
 <!-- /project details -->
+
 <!-- footer -->
 <footer>
   <!-- main footer -->
-  <div class="section bg-secondary">
-    <div class="container">
+  <div class="section bg-secondary p-5 mb-0 pb-0">
+    <div class="container-fluid pl-5 pr-5 mb-0">
       <div class="row justify-content-between">
         <!-- footer content -->
-        <div class="col-lg-5 mb-5 mb-lg-0">
-              <!-- logo -->
-              <a class="mb-4 d-inline-block" href="index.html">  <img class="img-fluid" src="NewImages/logo1.png" width="180px" height="55px" ></a>
-              <p class="text-light">Our company is committed to serve the industry by producing high precision and advanced technology products of global standards. Our uniqueness lives in anticipating the market needs in advance and developing products to meet those needs.</p>
-              <p class="text-light mb-5">Due to our continuous efforts for up gradation of quality and workmanship, we assure the best quality products, timely delivery and better after sales service</p>
-              <h4 class="text-white mb-4">Follow Us On</h4>
+        <div class="col-lg-5">
+          <!-- logo -->
+          <a class="mb-4 d-inline-block p-1" href="index.html"><img src="NewImages/logo1.png" width="220px" height="100px"></a>
+          <p class="text-light">Our company is committed to serve the industry by producing high precision and advanced technology products of global standards. Our uniqueness lives in anticipating the market needs in advance and developing products to meet those needs.</p>
+          <p class="text-light mb-5">Due to our continuous efforts for up gradation of quality and workmanship, we assure the best quality products, timely delivery and better after sales service</p>
+          <h4 class="text-white mb-2">Follow Us On</h4>
           <!-- social links -->
           <ul class="list-inline social-icon-alt">
             <li class="list-inline-item">
@@ -280,7 +245,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
               <a class="hover-ripple" href="#"><i class="fa fa-twitter"></i></a>
             </li>
             <li class="list-inline-item">
-              <a class="hover-ripple" target="_blank" href="https://www.linkedin.com/company/electropotent-infotech/"><i class="fa fa-linkedin"></i></a> 
+              <a class="hover-ripple" target="_blank" href="https://www.linkedin.com/company/electropotent-infotech/"><i class="fa fa-linkedin"></i></a>
             </li>
             <li class="list-inline-item">
               <a class="hover-ripple" href="#"><i class="fa fa-pinterest"></i></a>
@@ -291,7 +256,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
           <div class="row">
             <!-- service list -->
             <div class="col-6 mb-5">
-              <h4 class="text-white mb-4">Services</h4>
+              <h4 class="text-white mb-4 mt-5">Services</h4>
               <ul class="list-styled">
                 <li class="mb-3 text-light"><a class="text-light d-block" href="about.html">Company History</a></li>
                 <li class="mb-3 text-light"><a class="text-light d-block" href="about.html">About Us</a></li>
@@ -299,33 +264,27 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
                 <li class="mb-3 text-light"><a class="text-light d-block" href="service.html">Services</a></li>
                               </ul>
             </div>
-            <!-- contact info -->
-            <div class="col-6 mb-5">
-              <h4 class="text-white mb-4">Contact Info</h4>
-              <ul class="list-unstyled">
-                <li class="text-light mb-3">682/B, ShivaRatna Housing Society, Swami Vivekanand road, near Sayadri Hospital, Pune MH-411037</li>
-                <li class="text-light mb-3">+918080919227</li>
-                <li class="text-light mb-3">info@electropotentinfotech.com</li>
-              </ul>
-            </div>
-         
+              <!-- contact info -->
+              <div class="col-6 mb-5 mt-5">
+                <h4 class="text-white mb-4">Contact Info</h4>
+                <ul class="list-unstyled">
+                  <li class="text-light mb-2">682/B, ShivaRatna Housing Society, Swami Vivekanand road, near Sayadri Hospital, Pune MH-411037</li>
+                  <li class="text-light mb-2">+918080919227</li>
+                  <li class="text-light mb-3">info@electropotentinfotech.com</li>
+                </ul>
+              </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- copyright -->
-  <div class="bg-secondary-darken py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-          <p class="mb-0 text-white"><a href="index.html"><span class="text-primary">Electro Potent InfoTech</span></a> &copy; <script>
+  <div class="bg-secondary-darken p-1">
+    <div class="container-fluid">
+          <p class="mb-0 text-white text-right"><a href="index.html"><span class="text-danger">Electro Potent InfoTech</span></a> &copy; <script>
               var CurrentYear = new Date().getFullYear()
               document.write(CurrentYear)
             </script> All Right Reserved</p>
-        </div>
-       
-      </div>
     </div>
   </div>
 </footer>
