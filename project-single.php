@@ -123,13 +123,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
     <div class="row">
       <div class="col-13">
         <h2 class="text-white mb-3">Project Details</h2>
-        <!-- breadcrumb -->
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-transparent p-0">
-            <li class="breadcrumb-item font-weight-semebold"><a class="text-white" href="index.html">Home</a></li>
-            <li class="breadcrumb-item font-weight-semebold active text-primary" aria-current="page">Project Details</li>
-          </ol>
-        </nav>
+       
       </div>
     </div>
   </div>
