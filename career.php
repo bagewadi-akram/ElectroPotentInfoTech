@@ -1,3 +1,134 @@
+
+<?php
+
+$message = "";
+
+if (isset($_POST['submit'])) {
+
+     # verify url, this is for recaptcha V2
+    //  error_reporting(0);     
+     $secretKey = "6LfHSKMgAAAAACYgvN9fifALxKPOSIlfUu7MPDDL";
+     $responseKey = $_POST['g-recaptcha-response'];
+
+     $url = "https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$responseKey;
+     $response = file_get_contents($url);
+     $response = json_decode($response);    
+
+     
+     $firstname = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["firstname"])));
+     $lastname = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["lastname"])));
+     $email = filter_var(trim($_POST["mail"]), FILTER_SANITIZE_EMAIL);
+
+    //  $subject = trim($_POST["subject"]);
+    //  $message = trim($_POST["message"]);
+     $phone = trim($_POST["phone"]);
+    
+     $name = $firstname." ".$lastname;
+     $headers = "From: $name <$email>";
+     $message = '
+     <h3 align="center">Candidate Details</h3>
+         <table border="1" width="100%" cellpadding="5" cellspacing="5">
+             <tr>
+                 <td width="30%">Name</td>
+                 <td width="70%">'.$name.'</td>
+             </tr>
+             <tr>
+                 <td width="30%">Email Address</td>
+                 <td width="70%">'.$email.'</td>
+             </tr>
+             <tr>
+                 <td width="30%">Phone Number</td>
+                 <td width="70%">'.$phone.'</td>
+             </tr>
+             <tr>
+                 <td width="30%">Message</td>
+                 <td width="70%">'.trim($_POST["message"]).'</td>
+             </tr>
+         </table>
+     ';
+
+    //  if ( empty($firstname) OR empty($lastname) OR empty($phone) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($message) ){  //OR empty($_FILES['resume']['tmp_name'])    OR empty($subject)
+    //     # Set a 400 (bad request) response code and exit.
+    //     // http_response_code(400);
+    //     echo "Please complete the form and try again.";
+    //     exit;
+    // }
+
+
+    $path = 'resume/'. $_FILES["file"]["name"];
+    move_uploaded_file($_FILES["file"]["tmp_name"], $path);
+    // exit;
+
+    require 'PHPMailerAutoload.php';
+    require 'mail_credential.php';
+
+    $mail = new PHPMailer;
+
+    // $mail->SMTPDebug = 5;                               // Enable verbose debug output
+
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'bond.herosite.pro';//bond.herosite.pro    smtp2.example.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = EMAIL;                 // SMTP username
+    $mail->Password = PASS;                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;//465;587                                    // TCP port to connect to
+
+    // $message .= "Mobile Number:\n$phone\n";
+
+    $mail->setFrom(EMAIL, "_mainaccount@electropotentinfotech.com");   //('from@example.com', 'Mailer');
+    $mail->addAddress('azam@electropotentinfotech.com');//('joe@example.net', 'Joe User');     
+
+// Add a recipient
+    // $mail->addAddress('ellen@example.com');               // Name is optional
+    $mail->addReplyTo($email);//('info@example.com', 'Information');
+
+    // $mail->addCC('cc@example.com');
+    // $mail->addBCC('bcc@example.com');
+
+    $mail->addAttachment($path);   // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+
+    $mail->isHTML(true);                                  // Set email format to HTML
+
+
+    $mail->Subject = "Application for Apperenticeship";
+    $mail->Body = $message;
+    $mail->header = $headers;
+    
+    // $mail->Subject = 'Here is the subject';
+    // $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+
+    if($response->success){
+        if(!$mail->send()){
+          $message = '<div class="alert alert-danger">There was an error while sending the email, please try after soem time. </div>'; 
+            // http_response_code(500);
+            // echo "Oops! Something went wrong, couldn't send your message.";  
+            // echo "Mailer Error :". $mail->ErrorInfo;          
+        }else{
+            $message = '<div class="alert alert-success">Application Successfully Submitted.</div>';
+            unlink($path);
+            // http_response_code(200);
+            // echo "Thank You! Your message has been sent.";
+        }
+    }else{
+        $message = '<div class="alert alert-danger">Recaptcha Verification Failed.</div>'; 
+        // echo "Verification Failed";   
+    }
+    // if (!$mail->send()) {
+    //     echo 'Message could not be sent.';
+    //     echo 'Mailer Error: ' . $mail->ErrorInfo;
+    // } else {
+    //     echo 'Message has been sent';
+    // }
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 
 <!--
@@ -61,25 +192,9 @@
           <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <a class="navbar-brand" href="index.html">
               <img
-                class="img-fluid"
-                src="NewImages/logo1.png"
-                width="200px"
-                height="150px"
-              />
-            </a>
+                class="img-fluid" src="NewImages/logo1.png" width="200px" height="150px"/></a>
 
-            <button
-              class="navbar-toggler border-0"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navigation"
-              aria-controls="navigation"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div
               class="collapse navbar-collapse text-center pb-lg-0"
               id="navigation"
@@ -98,7 +213,7 @@
                   <a class="nav-link" href="service.html">Services</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="career.html">Career </a>
+                  <a class="nav-link" href="career.php">Career </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact</a>
@@ -140,74 +255,37 @@
         <div class="col-5">
           <h3 class="section-title">Apply Here 👇</h3>
 
-          <form class="contact__form" method="post" action="mail.php">
+          <form class="contact__form" method="post" action="mail_phpmailer.php" enctype="multipart/form-data"> <!---action="mail_phpmailer.php" - -->
             <div class="alert alert-success contact__msg" style="display: none" role="alert">            
               Your message was sent successfully.
             </div>
-
-            <div class="row">
+             <!-- <php echo $message; ?>  -->
+             <div class="row">
               <div class="col-md-6">
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  class="form-control border-1 rounded-0 box-shadow mb-4"
-                  placeholder=" First Name"
-                />
+                <input type="text" name="firstname" id="firstname" class="form-control border-1 rounded-0 box-shadow mb-4" required placeholder=" First Name"/>
               </div>
               <div class="col-md-6">
                 <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  class="form-control border-1 rounded-0 box-shadow mb-4"
-                  placeholder="Last Name"
-                />
+                  type="text" name="lastname" id="lastname" class="form-control border-1 rounded-0 box-shadow mb-4" required placeholder="Last Name"/>
               </div>
               <div class="col-md-6">
-                <input
-                  type="email"
-                  name="mail"
-                  id="mail"
-                  class="form-control border-1 rounded-0 box-shadow mb-4"
-                  placeholder="Email"
-                />
+                <input type="email" name="mail" id="mail" class="form-control border-1 rounded-0 box-shadow mb-4" required placeholder="Email"/>
               </div>
               <div class="col-md-6">
-                <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  pattern="^[6-9][0-9]{9}$"
-                  class="form-control border-1 rounded-0 box-shadow mb-4"
-                  placeholder="Phone"
-                />
-              </div>
-              <div class="col-md-12">
-                <input
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  class="form-control border-1 rounded-0 box-shadow mb-4"
-                  placeholder="Post Applied"
-                />
+                <input type="text" name="phone" id="phone" pattern="^[6-9][0-9]{9}$" class="form-control border-1 rounded-0 box-shadow mb-4" required placeholder="Phone"/>
               </div>
               <div class="col-12">
-                <textarea
-                  name="message"
-                  id="message"
-                  class="form-control border-1 rounded-0 box-shadow mb-5 py-3 px-4"
-                  placeholder="Description"
-                ></textarea>
+                <label for="name" class="form-label">Upload Your Resume</label>
+                <input class="form-control" required type="file" id="file" accept=".doc, .docx, .pdf" name="file">  <!---form-control form-control-sm       border-1 rounded-0 box-shadow mb-4-->
               </div>
               <div class="col-12">
-                <button
-                  type="submit"
-                  value="send"
-                  class="btn btn-primary hover-ripple"
-                >
-                  Submit
-                </button>
+                <textarea name="message" id="message" class="form-control border-1 rounded-0 box-shadow mb-5 py-3 px-4" required placeholder="Description"></textarea>
+              </div>
+              <div class="col-md-6">
+                <div class="g-recaptcha" data-sitekey="6LfHSKMgAAAAALd8xhttO5kMvmySIbZILI3sDer9"></div>
+              </div>
+              <div class="col-md-6">
+                <button type="submit" name="submit" value="send" class="btn btn-primary hover-ripple">Submit</button>
               </div>
             </div>
           </form>
@@ -364,7 +442,12 @@
 
     <!-- Main Script -->
     <script src="js/script.js"></script>
+    
+    <!-- Req for send mail form -->
+    <!-- <script src="js/contact.js"></script> -->
 
-    <script src="js/contact.js"></script>
+    <!-- For recaptcha V2  -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   </body>
 </html>

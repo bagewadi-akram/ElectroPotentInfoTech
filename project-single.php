@@ -103,7 +103,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
               <a class="nav-link" href="service.html">Services</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="career.html">Career   </a>
+            <a class="nav-link" href="career.php">Career   </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -170,8 +170,8 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
         <!-- project image -->
         <!-- <img class="img-fluid w-100 mb-5" src="NewImages/Products/developmentkit.jpg" alt="project image"> -->
         <?php 
-				$fileDir = "file:///C:/xampp/htdocs/epit_website/public/uploads/";
-        // $fileDir = "https://epit.electropotentinfotech.in/uploads/";
+				$fileDir = "file:///C:/xampp/htdocs/epit_website_server/public_html/uploads/";
+        // $fileDir = "https://electropotentinfotech.com/adminpanel/uploads/";
 				$filename = $product['pro_image'];
 				$file = $fileDir . $filename;
 				$b64image = base64_encode(file_get_contents($file));
@@ -197,16 +197,17 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
           <div class="alert alert-success contact__msg" style="display: none" role="alert">
             Your message was sent successfully.
         </div>
-            <input type="text" name="name" id="name" class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3"
+            <input type="text" name="name" id="name" required class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3"
               placeholder="Name">
-            <input type="email" name="mail" id="mail" class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3"
+            <input type="email" name="mail" id="mail" required class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3"
               placeholder="Email">
-            <input type="text" name="phone" id="phone" class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3"
+            <input type="text" name="phone" id="phone" required class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3"
               placeholder="Phone">
-            <input type="text" name="subject" id="subject" class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3"
+            <input type="text" name="subject" id="subject" required class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3"
               placeholder="Subject">
-            <textarea name="message" id="message" class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3 py-3 px-4"
+            <textarea name="message" id="message" required class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3 py-3 px-4"
               placeholder="Your Message"></textarea>
+              <div class="g-recaptcha" data-sitekey="6LfHSKMgAAAAALd8xhttO5kMvmySIbZILI3sDer9"></div>    
             <button type="submit" value="send" class="btn btn-primary">send message</button>
           </form>
         </div>
@@ -306,6 +307,10 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
 <!-- Main Script -->
 <script src="js/script.js"></script>
 <script src="js/contact.js"></script>
+
+<!-- For recaptcha V2  -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 </body>
 </html>
