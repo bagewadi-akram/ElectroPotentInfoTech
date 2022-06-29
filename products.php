@@ -96,7 +96,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
               <a class="nav-link" href="service.html">Services</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="career.html">Career   </a>
+            <a class="nav-link" href="career.php">Career   </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -139,8 +139,8 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 				// if($counter % 2 === 0){ ?>
 				
 				<?php 
-					$fileDir = "file:///C:/xampp/htdocs/epit_website/public/uploads/";
-          // $fileDir = "https://epit.electropotentinfotech.in/uploads/";
+					$fileDir = "file:///C:/xampp/htdocs/epit_website_server/public_html/uploads/";
+          // $fileDir = "https://electropotentinfotech.com/adminpanel/uploads/";
 					$filename = $product['pro_image'];
 					$file = $fileDir . $filename;
 					$b64image = base64_encode(file_get_contents($file));

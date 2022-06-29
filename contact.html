@@ -1,3 +1,6 @@
+<?php require_once('FormHelper.php'); ?>
+
+
 <!DOCTYPE html>
 
 <!--
@@ -83,7 +86,7 @@
                <a class="nav-link" href="service.html">Services</a>
              </li>
              <li class="nav-item">
-              <a class="nav-link" href="career.html">Career   </a>
+              <a class="nav-link" href="career.php">Career   </a>
              </li>
              <li class="nav-item">
                <a class="nav-link" href="contact.html">Contact</a>
@@ -172,21 +175,24 @@
       
         <div class="row">
           <div class="col-md-6">
-            <input type="text" name="name" id="name" class="form-control border-0 rounded-0 box-shadow mb-4" placeholder="Name">
+            <input type="text" name="name" id="name" class="form-control border-0 rounded-0 box-shadow mb-4" required placeholder="Name">
           </div>
           <div class="col-md-6">
-            <input type="email" name="mail" id="mail" class="form-control border-0 rounded-0 box-shadow mb-4" placeholder="Email">
+            <input type="email" name="mail" id="mail" class="form-control border-0 rounded-0 box-shadow mb-4" required placeholder="Email">
           </div>
           <div class="col-md-6">
-            <input type="text" name="phone" id="phone" pattern="^[6-9][0-9]{9}$" class="form-control border-0 rounded-0 box-shadow mb-4" placeholder="Phone">
+            <input type="text" name="phone" id="phone" pattern="^[6-9][0-9]{9}$" required class="form-control border-0 rounded-0 box-shadow mb-4" placeholder="Phone">
           </div>
           <div class="col-md-6">
-            <input type="text" name="subject" id="subject" class="form-control border-0 rounded-0 box-shadow mb-4" placeholder="Subject">
+            <input type="text" name="subject" id="subject" required class="form-control border-0 rounded-0 box-shadow mb-4" placeholder="Subject">
           </div>
           <div class="col-12">
-            <textarea name="message" id="message" class="form-control border-0 rounded-0 box-shadow mb-5 py-3 px-4" placeholder="Your Message"></textarea>
+            <textarea name="message" id="message" required class="form-control border-0 rounded-0 box-shadow mb-5 py-3 px-4" placeholder="Your Message"></textarea>
           </div>
-          <div class="col-12">
+          <div class="col-md-6">
+            <div class="g-recaptcha" data-sitekey="6LfHSKMgAAAAALd8xhttO5kMvmySIbZILI3sDer9"></div>
+          </div>
+          <div class="col-md-6">
             <button type="submit" value="send" class="btn btn-primary hover-ripple" >send message</button>
           </div>
         </div>
@@ -313,6 +319,10 @@
 <script src="js/script.js"></script>
 
 <script src="js/contact.js"></script>
+
+
+<!-- For recaptcha V2  -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>
 </html>

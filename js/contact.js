@@ -30,11 +30,11 @@
     
     form.submit(function (e) {
         e.preventDefault();
-        form_data = $(this).serialize();
+        form_data = $(this).serialize(); // old line
         $.ajax({
             type: 'POST',
-            url: form.attr('action'),
-            data: form_data
+            url: form.attr('action'),  // old line
+            data: form_data,      //  old line
         })
         .done(done_func)
         .fail(fail_func);
