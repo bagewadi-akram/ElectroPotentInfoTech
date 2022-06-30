@@ -137,38 +137,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
       <div class="col-lg-8">
         <h2><?= $product['name'] ?></h2>
         <p class="mb-5"><?= $product['description'] ?></p>
-        <!-- <div class="row no-gutters bg-secondary p-sm-5 p-4 mb-5">
-          <div class="col-md-3 col-6 mb-4 mb-md-0">
-            <div class="border-md-right border-muted ml-4">
-              <h5 class="text-white text-uppercase">CLIENT</h5>
-              <span class="text-light">Australia</span>
-            </div>
-          </div>
-          <div class="col-md-3 col-6 mb-4 mb-md-0">
-            <div class="border-md-right border-muted ml-4">
-              <h5 class="text-white text-uppercase">Category</h5>
-              <span class="text-light">Investment</span>
-            </div>
-          </div>
-          <div class="col-md-3 col-6 mb-4 mb-md-0">
-            <div class="border-md-right border-muted ml-4">
-              <h5 class="text-white text-uppercase">DATE</h5>
-              <span class="text-light">16 April, 2018</span>
-            </div>
-          </div>
-          <div class="col-md-3 col-6 mb-4 mb-md-0">
-            <div class="ml-4">
-              <h5 class="text-white text-uppercase">status</h5>
-              <span class="text-light">In Process</span>
-            </div>
-          </div>
-        </div> -->
-
-
-
-
-        <!-- project image -->
-        <!-- <img class="img-fluid w-100 mb-5" src="NewImages/Products/developmentkit.jpg" alt="project image"> -->
+       
         <?php 
 				$fileDir = "file:///C:/xampp/htdocs/epit_website_server/public_html/uploads/";
         // $fileDir = "https://electropotentinfotech.com/adminpanel/uploads/";
@@ -207,7 +176,7 @@ $product = $statement->fetch(PDO::FETCH_ASSOC);
               placeholder="Subject">
             <textarea name="message" id="message" required class="form-control form-control-sm border-0 rounded-0 box-shadow mb-3 py-3 px-4"
               placeholder="Your Message"></textarea>
-              <div class="g-recaptcha" data-sitekey="6LfHSKMgAAAAALd8xhttO5kMvmySIbZILI3sDer9"></div>    
+              <div class="g-recaptcha mb-4" data-sitekey="6LfHSKMgAAAAALd8xhttO5kMvmySIbZILI3sDer9"></div>    
             <button type="submit" value="send" class="btn btn-primary">send message</button>
           </form>
         </div>

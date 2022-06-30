@@ -131,12 +131,7 @@ if (isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
+
 
 <html lang="zxx">
   <head>
@@ -241,9 +236,9 @@ if (isset($_POST['submit'])) {
 </section>
 <!-- /page title -->
     <section>
-    <div class="container-fluid p-5 ">
+    <div class="container-fluid p-5 " id="Apply">
       <div class="row align-items-center justify-content-between pl-5 pr-5">
-        <div class="col-5">
+        <div class="col-md-5 " >
           <span class="section-title-border"></span>
           <p class="subtitle mt-5">Carrer's at ElectroPotent InfoTech</p>
           <h3 class="section-title">
@@ -252,7 +247,7 @@ if (isset($_POST['submit'])) {
           </h3>
           <span class="section-title-border float-right"></span>
         </div>
-        <div class="col-5">
+        <div class="col-md-6">
           <h3 class="section-title">Apply Here 👇</h3>
 
           <form class="contact__form" method="post" action="mail_phpmailer.php" enctype="multipart/form-data"> <!---action="mail_phpmailer.php" - -->
@@ -260,7 +255,7 @@ if (isset($_POST['submit'])) {
               Your message was sent successfully.
             </div>
              <!-- <php echo $message; ?>  -->
-             <div class="row">
+             <div class="row justify-content-between">
               <div class="col-md-6">
                 <input type="text" name="firstname" id="firstname" class="form-control border-1 rounded-0 box-shadow mb-4" required placeholder=" First Name"/>
               </div>
@@ -274,18 +269,18 @@ if (isset($_POST['submit'])) {
               <div class="col-md-6">
                 <input type="text" name="phone" id="phone" pattern="^[6-9][0-9]{9}$" class="form-control border-1 rounded-0 box-shadow mb-4" required placeholder="Phone"/>
               </div>
-              <div class="col-12">
-                <label for="name" class="form-label">Upload Your Resume</label>
-                <input class="form-control" required type="file" id="file" accept=".doc, .docx, .pdf" name="file">  <!---form-control form-control-sm       border-1 rounded-0 box-shadow mb-4-->
-              </div>
-              <div class="col-12">
+              <div class="col-md-12 ">
                 <textarea name="message" id="message" class="form-control border-1 rounded-0 box-shadow mb-5 py-3 px-4" required placeholder="Description"></textarea>
               </div>
               <div class="col-md-6">
-                <div class="g-recaptcha" data-sitekey="6LfHSKMgAAAAALd8xhttO5kMvmySIbZILI3sDer9"></div>
+                <label for="name" class="form-label">Upload Your Resume</label>
+                <input type="file" required id="file" accept=".doc, .docx, .pdf" name="file" >
               </div>
               <div class="col-md-6">
-                <button type="submit" name="submit" value="send" class="btn btn-primary hover-ripple">Submit</button>
+            <div class="g-recaptcha" data-sitekey="6LfHSKMgAAAAALd8xhttO5kMvmySIbZILI3sDer9"></div>
+          </div>
+              <div class="col-md-12 p-2 mt-3">
+                <button type="submit" name="submit" value="send" class="btn btn-primary hover-ripple ">Submit</button>
               </div>
             </div>
           </form>
@@ -302,12 +297,12 @@ if (isset($_POST['submit'])) {
       </h3></div>
       <div class="card border-2 rounded-4 box-shadow">
         <div class="row justify-content-between p-2">
-          <div class="col-7 ">
+          <div class="col-md-6 ">
             <div class="card-body position-relative">
               <h2 class="text-dark text-center mb-4">Embedded Enggineer</h2>
               <div class="card-text" title="Embedded Enggineer">
                 <h4 title= "Job Description">Job Description</h4>
-                <ul class="mb-4">
+                <ul class="list-styled style-circle mb-4">
                   <li>
                     Minimum 0 to 1 year, Experience of firmware and hardware
                     development experience
@@ -321,7 +316,7 @@ if (isset($_POST['submit'])) {
                   </li>
                 </ul>
                 <h4 title="Mandatory Skills" >Mandatory Skills</h4>
-                <ul>
+                <ul class="list-styled style-circle">
                   <li>Microcontroller based Circuit design</li>
                   <li>
                     Knowledge on PIC microcontrollers ,Atmel and cypress
@@ -341,13 +336,14 @@ if (isset($_POST['submit'])) {
                 </ul>
               </div>
             </div>
+            <a href="#Apply" class="btn btn-secondary btn-arrow ml-5 mt-5 pl-5">Read More</a>
           </div>
-          <div class="col-5 ">
+          <div class="col-md-6 ">
             <img
               class="card-img-top rounded-0 "
               src="NewImages/aboutus.jpg"
-              height="500px"
-              width="650px"
+              height="600px"
+              width="390px"
             />
           </div>
         </div>

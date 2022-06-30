@@ -2039,7 +2039,7 @@ blockquote::before {
   content: "\f10d";
   font-family: "FontAwesome";
   font-size: 100px;
-  color: rgba(134, 195, 58, 0.3);
+  color: rgba(58, 117, 195, 0.3);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -2066,11 +2066,11 @@ blockquote p {
   font-size: 14px;
   left: 0;
   top: 1px;
-  color: #62caf3;
+  color: #d10101;
   transition: 0.3s ease;
 }
 .list-styled li:hover::before {
-  color: #62caf3 !important;
+  color: #d10101 !important;
 }
 .list-styled li:hover a {
   text-decoration: underline;
